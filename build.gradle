@@ -1,0 +1,44 @@
+plugins {
+    id 'application'
+    id 'java'
+    id 'java-library'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    api 'javax.xml.bind:jaxb-api:2.2.4'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClass = 'org.esi.Parser'
+}
+
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+}
+
+
+jar {
+    from 'resources', {
+        into 'resources'
+    }
+
+    manifest {
+        attributes 'Main-Class': 'org.esi.Parser'
+    }
+}

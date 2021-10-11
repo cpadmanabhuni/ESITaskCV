@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<car>
+    <Assemblies>
+        <Assembly>
+            <AssemblyId>1</AssemblyId>
+            <Name>Body</Name>
+            <Quantity>1</Quantity>
+            <ParentAssemblyRef></ParentAssemblyRef>
+            <InitialPose>Point(0,0,0)</InitialPose>
+            <InitialContainerRef></InitialContainerRef>
+        </Assembly>
+    </Assemblies>
+    <Parts>
+        <Part>
+            <PartId>1</PartId>
+            <Name>Wheel</Name>
+            <Quantity>4</Quantity>
+            <ParentAssemblyRef>1</ParentAssemblyRef>
+            <InitialPose>Point(0,0,0)</InitialPose>
+            <InitialContainerRef>1</InitialContainerRef>
+        </Part>
+        <Part>
+            <PartId>2</PartId>
+            <Name>Screw M4</Name>
+            <Quantity>4</Quantity>
+            <ParentAssemblyRef>1</ParentAssemblyRef>
+            <InitialPose>Point(0,0,0)</InitialPose>
+            <InitialContainerRef>2</InitialContainerRef>
+        </Part>
+        <Part>
+            <PartId>3</PartId>
+            <Name>Axle</Name>
+            <Quantity>2</Quantity>
+            <ParentAssemblyRef>1</ParentAssemblyRef>
+            <InitialPose>Point(0,0,0)</InitialPose>
+            <InitialContainerRef>1</InitialContainerRef>
+        </Part>
+    </Parts>
+</car>

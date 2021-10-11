@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<company>
+    <departments>
+        <department>
+            <name>Car assembly line 1</name>
+            <tools>
+                <tool>
+                    <ToolId>1</ToolId>
+                    <Name>Screwdriver</Name>
+                    <GeometryRef>screwdriver.gltf</GeometryRef>
+                    <MetaData>
+                        <Info>Wuerth 6136001</Info>
+                        <Info>Bit Storage in the Handle</Info>
+                    </MetaData>
+                    <InitialPose>Point3(0,0,0)</InitialPose>
+                    <InitialContainerRef>2</InitialContainerRef>
+                </tool>
+                <tool>
+                    <ToolId>2</ToolId>
+                    <Name>Lifting device</Name>
+                    <GeometryRef>lifter.gltf</GeometryRef>
+                    <MetaData>
+                        <Info>Ameise</Info>
+                        <Info>194778-A2</Info>
+                    </MetaData>
+                    <InitialPose>Point3(0,0,0)</InitialPose>
+                    <InitialContainerRef></InitialContainerRef>
+                </tool>
+
+            </tools>
+            <containers>
+                <container>
+                    <ContainerId>1</ContainerId>
+                    <Name>Storage Rack</Name>
+                    <GeometryRef>rack.gltf</GeometryRef>
+                    <MetaData>
+                        <Info>Dimensions 36"W x 14" D x 56"H</Info>
+                        <Info>22 bins total. 12 medium, 6 large, 4 extra large bins</Info>
+                        <Info>7 Total Shelves</Info>
+                    </MetaData>
+                    <InitialPose>Point3(0,0,0)</InitialPose>
+                    <InitialContainerRef></InitialContainerRef>
+                </container>
+                    <container>
+                        <ContainerId>2</ContainerId>
+                        <Name>Storage Bin</Name>
+                        <GeometryRef>bin.gltf</GeometryRef>
+                        <MetaData>
+                            <Info>Akro-Mils 30270</Info>
+                            <Info>18-Inch x 16-1/2-Inch x 11-Inch</Info>
+                        </MetaData>
+                        <InitialPose>Point3(0,0,0)</InitialPose>
+                        <InitialContainerRef>1</InitialContainerRef>
+                </container>
+            </containers>
+        </department>
+    </departments>
+</company>

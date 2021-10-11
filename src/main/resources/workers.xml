@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<company>
+    <departments>
+        <department>
+            <name>Car assembly line 1</name>
+            <workers>
+                <worker>
+                    <EmployeeId>1</EmployeeId>
+                    <Name>Bob</Name>
+                    <Roles>
+                        <Role>Shift supervisor</Role>
+                        <Role>Assembly line worker</Role>
+                    </Roles>
+                    <Skills>
+                        <Skill>Axle assembly expert</Skill>
+                    </Skills>
+                </worker>
+                <worker>
+                    <EmployeeId>2</EmployeeId>
+                    <Name>Alice</Name>
+                    <Roles>
+                        <Role>Assembly line worker</Role>
+
+                    </Roles>
+                    <Skills>
+                        <Skill>Body assembly</Skill>
+                        <Skill>Wheel assembly</Skill>
+                    </Skills>
+                </worker>
+            </workers>
+        </department>
+    </departments>
+</company>

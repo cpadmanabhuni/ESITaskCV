@@ -1,0 +1,73 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="company" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="MetaData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Info" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent msdata:ColumnName="Info_Text" msdata:Ordinal="0">
+              <xs:extension base="xs:string">
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="company" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="MetaData" />
+        <xs:element name="departments">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="department" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xs:string" minOccurs="0" />
+                    <xs:element name="tools" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="tool" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ToolId" type="xs:string" minOccurs="0" />
+                                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                                <xs:element name="GeometryRef" type="xs:string" minOccurs="0" />
+                                <xs:element name="InitialPose" type="xs:string" minOccurs="0" />
+                                <xs:element name="InitialContainerRef" type="xs:string" minOccurs="0" />
+                                <xs:element ref="MetaData" minOccurs="0" maxOccurs="unbounded" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="containers" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="container" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ContainerId" type="xs:string" minOccurs="0" />
+                                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                                <xs:element name="GeometryRef" type="xs:string" minOccurs="0" />
+                                <xs:element name="InitialPose" type="xs:string" minOccurs="0" />
+                                <xs:element name="InitialContainerRef" type="xs:string" minOccurs="0" />
+                                <xs:element ref="MetaData" minOccurs="0" maxOccurs="unbounded" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

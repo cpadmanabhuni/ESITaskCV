@@ -1,0 +1,64 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="company" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="company" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="departments">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="department" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xs:string" minOccurs="0" />
+                    <xs:element name="workers" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="worker" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="EmployeeId" type="xs:string" minOccurs="0" />
+                                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                                <xs:element name="Roles" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Role" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:simpleContent msdata:ColumnName="Role_Text" msdata:Ordinal="0">
+                                            <xs:extension base="xs:string">
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Skills" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Skill" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:simpleContent msdata:ColumnName="Skill_Text" msdata:Ordinal="0">
+                                            <xs:extension base="xs:string">
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

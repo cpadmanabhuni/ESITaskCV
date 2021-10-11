@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instructionSeq
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="workinstructions.xsd">
+
+    <instructions>
+        <instruction>
+            <description>Initial Condition</description>
+            <id>step1</id>
+
+        </instruction>
+
+        <instruction>
+            <description>Assemble Wheels</description>
+            <id>step2</id>
+            <actions>
+                <action>
+                    <name>Action1</name>
+                    <command>Mount Wheel A on Axle A</command>
+
+                    <resources>
+                        <operators>
+                            <operator>
+                                <employeeRefID>1</employeeRefID>
+                            </operator>
+                        </operators>
+                        <machine>
+                            <toolRefID>1</toolRefID>
+                            <quantity>1</quantity>
+                        </machine>
+                        <itemsToAssemble>
+                            <item>
+                                <itemRefID>partId:1</itemRefID>
+                                <quantity>1</quantity>
+                            </item>
+                            <item>
+                                <itemRefID>partId:3</itemRefID>
+                                <quantity>1</quantity>
+                            </item>
+                        </itemsToAssemble>
+                    </resources>
+
+                    <endItem>
+                        <id>1</id>
+                        <name>Wheel A On Axle A</name>
+                        <targetPos>Pos(10,10,10)</targetPos>
+                    </endItem>
+                </action>
+                <action>
+                    <name>Action2</name>
+                    <command>Mount Wheel B on Axle B</command>
+                    <resources>
+                        <operators>
+                            <operator>
+                                <employeeRefID>2</employeeRefID>
+                            </operator>
+                        </operators>
+                        <machine>
+                            <toolRefID>1</toolRefID>
+                            <method>AssemblyLine3</method>
+                            <quantity>1</quantity>
+                        </machine>
+                        <itemsToAssemble>
+                            <item>
+                                <itemRefID>partId:1</itemRefID>
+                                <Quanity>1</Quanity>
+                            </item>
+                            <item>
+                                <itemRefID>partId:3</itemRefID>
+                                <Quanity>1</Quanity>
+                            </item>
+                        </itemsToAssemble>
+                    </resources>
+
+                    <endItem>
+                        <id>2</id>
+                        <name>Wheel B On Axle B</name>
+                        <targetPos>Pos(20,20,20)</targetPos>
+                    </endItem>
+                </action>
+            </actions>
+
+        </instruction>
+
+        <instruction>
+            <description>Position Body</description>
+            <id>step3</id>
+            <actions>
+                <action>
+                    <name>Action1</name>
+                    <command>Position the Body</command>
+                    <resources>
+                        <operators>
+                            <operator>
+                                <employeeRefID>1</employeeRefID>
+                            </operator>
+                            <operator>
+                                <employeeRefID>2</employeeRefID>
+                            </operator>
+                        </operators>
+                        <machine>
+                            <toolRefID>2</toolRefID>
+                            <quantity>1</quantity>
+                        </machine>
+                        <itemsToAssemble>
+                            <item>
+                                <itemRefID>Assembly:1</itemRefID>
+                                <Quanity>1</Quanity>
+                            </item>
+                            <item>
+                                <itemRefID>endItem:1</itemRefID>
+                                <Quanity>1</Quanity>
+                            </item>
+                            <item>
+                                <itemRefID>endItem:2</itemRefID>
+                                <Quanity>1</Quanity>
+                            </item>
+                        </itemsToAssemble>
+                    </resources>
+
+                    <endItem>
+                        <id>2</id>
+                        <name>Positioned Body</name>
+                        <targetPos>Pos(30,30,30)</targetPos>
+                    </endItem>
+                </action>
+            </actions>
+
+        </instruction>
+
+        <instruction>
+            <description>Assemble Wheel</description>
+            <id>step4</id>
+            <actions>
+                <action>
+                    <name>Action1</name>
+                    <command>Mount Wheel C on Axle A</command>
+
+                    <resources>
+                        <operators>
+                            <operator>
+                                <employeeRefID>1</employeeRefID>
+                            </operator>
+                        </operators>
+                        <machine>
+                            <toolRefID>1</toolRefID>
+                            <quantity>1</quantity>
+                        </machine>
+                        <itemsToAssemble>
+
+                            <item>
+                                <itemRefID>endItem:2</itemRefID>
+                                <quantity>1</quantity>
+                            </item>
+                            <item>
+                                <itemRefID>partId:1</itemRefID>
+                                <quantity>1</quantity>
+                            </item>
+
+                        </itemsToAssemble>
+                    </resources>
+
+                    <endItem>
+                        <id>3</id>
+                        <name>Wheel C On AxleA</name>
+                        <targetPos>Pos(30,30,30)</targetPos>
+                    </endItem>
+                </action>
+                <action>
+                    <name>Action2</name>
+                    <command>Mount Wheel D on Axle B</command>
+                    <resources>
+                        <operators>
+                            <operator>
+                                <employeeRefID>2</employeeRefID>
+                            </operator>
+                        </operators>
+                        <machine>
+                            <toolRefID>1</toolRefID>
+                            <quantity>1</quantity>
+                        </machine>
+                        <itemsToAssemble>
+                            <item>
+                                <itemRefID>endItem:2</itemRefID>
+                                <quantity>1</quantity>
+                            </item>
+                            <item>
+                                <itemRefID>partId:1</itemRefID>
+                                <quantity>1</quantity>
+                            </item>
+                        </itemsToAssemble>
+                    </resources>
+
+                    <endItem>
+                        <id>4</id>
+                        <name>Wheel D On Axle B</name>
+                        <targetPos>Pos(30,30,30)</targetPos>
+                    </endItem>
+                </action>
+            </actions>
+
+        </instruction>
+
+        <instruction>
+            <description>Final Assembly</description>
+            <id>step5</id>
+
+        </instruction>
+
+    </instructions>
+</instructionSeq>
